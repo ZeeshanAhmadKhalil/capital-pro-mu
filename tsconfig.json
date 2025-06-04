@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "strict": true,
+    "noEmit": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "module": "esnext",
+    "incremental": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "useUnknownInCatchVariables": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "~mock/*": ["./src/_mock/*"],
+      "~assets/*": ["./src/assets/*"],
+      "~auth/*": ["./src/config/auth/*"],
+      "~context/*": ["./src/config/context/*"],
+      "~env/*": ["./src/config/env/*"],
+      "~helper/*": ["./src/config/helper/*"],
+      "~routes/*": ["./src/config/routes"],
+      "~theme/*": ["./src/config/theme/*"],
+      "~types/*": ["./src/config/types/*"],
+      "~config/*": ["./src/config/*"],
+      "~hooks/*": ["./src/hooks/*"],
+      "~pages/*": ["pages/*"],
+      "~layouts/*": ["./src/layouts/*"],
+      "~components/*": ["./src/screens/shared/components/*"],
+      "~screens/*": ["./src/screens/*"],
+      "~store/*": ["./src/store/*"],
+      "~services/*": ["./src/services/*"],
+      "~styles/*": ["./src/styles/*"]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      },
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      },
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/config/context/index.js"
+  ]
+}
