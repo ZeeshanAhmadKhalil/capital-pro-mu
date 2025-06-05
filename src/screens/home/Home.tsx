@@ -28,14 +28,12 @@ function Home({ }) {
         const response = await makeTemplate({});
         const { error, data: respData }: any = response || {};
 
-        if (error) {
-            toast.error(error?.data?.message);
-        }
+        if (error)
+            toast.error(error?.data?.message || "Something went wrong, contact the dev.");
 
-        if (respData) {
+        if (respData)
             toast.success(respData?.message);
 
-        }
     })
 
     return (
